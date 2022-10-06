@@ -5,10 +5,10 @@ const adivinanza = document.querySelector(".adivinanza");
 cerrarsesion.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if (confirm("¿Estas seguro que deseas salir?")) {
+    if (confirm("¿Estás seguro que deseas salir?")) {
         swal.fire({
             icon: 'success',
-            title: 'Adios welva pronto',
+            title: 'Adiós, vuelva pronto',
         })
         setTimeout(() => {
             window.location.href = "../index.html";

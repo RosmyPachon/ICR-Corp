@@ -11,12 +11,12 @@ let extraerC = contraseñaBD.slice(0, 1)
 form1.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if (usuario.value !== usuarioBD && contraseña.value !== contraseñaBD) {
+    if (usuario.value !== usuarioBD || contraseña.value !== contraseñaBD) {
         Swal.fire({
                 icon: 'error',
                 title: 'Error',
                 text: 'Oh no, algo está mal',
-                footer: '<a>Vuelve a ingresar corectamente los campos</a>'
+                footer: '<a>Vuelve a ingresar correctamente los campos</a>'
             })
             //alert("Por favor vuelve a llenar los campos de manera correcta.")
         return
@@ -62,7 +62,7 @@ const mostrarCapchat = (extraerU, extraerC) => {
             Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: '¿No sabes sumar?',
+                    text: 'Suma incorrecta',
                 })
                 //alert("Respuesta incorrecta")
             return
@@ -70,7 +70,7 @@ const mostrarCapchat = (extraerU, extraerC) => {
         swal.fire({
             icon: 'success',
             title: "Bienvenido",
-            text: "Sesion iniciada",
+            text: "Sesión iniciada",
             background: "width",
         })
         setTimeout(() => {
